@@ -1,0 +1,179 @@
+/* start global varibales */
+:root {
+  --main-font: "Merienda", cursive;
+  --background-main-color: white;
+  --front-main-color: black;
+  --font-color: white;
+  --large-font-size: 30px;
+  --small-font-size: 14px;
+  --radius-deg: 18px;
+  --color-background: #f6f6f9;
+  --color-white: #fff;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --main-font: "Merienda", cursive;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  /* --color-info-dark: #7d8da1; */
+  /* --color-info-light: #dce1eb; */
+  --color-primary-variant: #111e88;
+  --aside-links-size: 20px;
+  --aside-links-color: #8895a7;
+  --card-border-radius: 32px;
+  --border-radius-1: 6.4px;
+  --border-radius-2: 12.8px;
+  --border-radius-3: 19.2px;
+
+  --card-padding: 28.8px;
+  --padding-1: 19.2;
+  --statics-font: poppins, sans-serif;
+  --box-shadow: 0 32px 48px var(--color-light);
+}
+/* End global varibales */
+
+.header {
+  width: 100%;
+  height: 70px;
+  background-color: transparent;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  z-index: 2;
+}
+.header-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+.header .header-container .logo {
+  font-family: var(--main-font);
+  font-weight: bold;
+  font-size: 25px;
+  color: var(--color-dark);
+}
+.header .burger-icon {
+  display: none;
+}
+.header .links {
+  height: 100%;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.header ul li {
+  padding: 7px 15px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.header ul li a {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  color: var(--color-dark);
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 600;
+  padding: 5px;
+  /* border-bottom: 1px solid var(--color-dark); */
+  transition-duration: 0.5s;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+.header ul li:hover {
+  border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -ms-border-radius: 5px 5px 0px 0px;
+  -o-border-radius: 5px 5px 0px 0px;
+  box-shadow: var(--box-shadow);
+}
+.header ul li:hover a {
+  font-size: 20px;
+}
+.header .right-header a {
+  color: var(--color-dark);
+  font-size: 25px;
+  padding: 5px;
+  position: relative;
+}
+.header .right-header a .cart-counter {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: red;
+  color: white;
+  padding: 2px;
+  font-size: 12px;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .header .burger-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .header .links {
+    background-color: transparent;
+    top: -500px;
+    left: 0;
+    overflow: hidden;
+    width: 100% !important;
+    height: 300px !important;
+    position: absolute;
+    backdrop-filter: blur(20px);
+    box-shadow: var(--box-shadow);
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+  .header .links ul {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .active {
+    top: 70px !important;
+  }
+  .active ul {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .active ul li {
+    height: 25%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}

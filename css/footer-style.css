@@ -1,0 +1,49 @@
+:root {
+  --main-font: "Merienda", cursive;
+  --background-main-color: white;
+  --front-main-color: #ff7000;
+  --font-color: black;
+  --large-font-size: 30px;
+  --small-font-size: 16px;
+  --radius-deg: 30px;
+  --large-home-font: 65px;
+  --small-home-font: 55px;
+  --statics-font: poppins, sans-serif;
+}
+
+/* start footer section */
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 5%;
+  font-size: 14px;
+  background-color: #333;
+  color: #ddd !important;
+  font-family: var(--statics-font);
+}
+.footer .left {
+  /* color: var(--background-main-color); */
+}
+.footer .right {
+  /* color: var(--background-main-color); */
+}
+.footer .left .footer-loc {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 5px;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
+.footer .right * {
+  margin-bottom: 10px;
+}
+.footer .right i {
+  font-size: 20px;
+}

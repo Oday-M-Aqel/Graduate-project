@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- connect css file -->
+    <link rel="stylesheet" href="/css/header-style.css" />
+    <link rel="stylesheet" href="/css/footer-style.css">
+    <link rel="stylesheet" href="/css/loading-style.css" />
+    <link rel="stylesheet" href="/css/reservation.css" />
+    <link rel="stylesheet" href="/css/footer-style.css">
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/images/home.ico" />
+    <title>YKPO Café</title>
+</head>
+
+<body>
+    <!-- loading animation -->
+    <div class="loader">
+        <span class="text">YKPO Café</span>
+        <span>
+            <div class="one"><i class="fa-solid fa-cookie"></i></div>
+            <div class="two"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+            <div class="three"><i class="fa-solid fa-pizza-slice"></i></div>
+        </span>
+    </div>
+    <!-- end loading animation -->
+
+    <!-- start header -->
+    <div class="header">
+        <div class="header-container">
+            <i class="fa-solid fa-bars  burger-icon" onclick="activeLinks()"></i>
+            <span class="logo">YKPO Café</span>
+            <div class="links">
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="menu">Menu</a></li>
+                    <li><a href="home#about">About</a></li>
+                    <li><a href="reservation">Book Table</a></li>
+                </ul>
+            </div>
+            <div class="right-header">
+                <a href="login" class="login-icon" onclick="redirect()" id="loginIc">
+                    <i class="fa-regular fa-circle-user login-icon"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+
+    <!-- start reservation section -->
+    <div class="reservation-container">
+        <form action="/reservation" method="post">
+            <h2>book table</h2>
+            <input type="text" class="person-name" placeholder="your name" required>
+            <input type="text" class="person-phone" placeholder="phone number" required>
+            <input type="number" class="persons-number" placeholder="number of persons" min="1" max="10" required>
+            <input type="datetime-local" class="reservation-date" id="date-time" name="reservation-date" required>
+            <!-- <input type="time" class="reservation-time" required> -->
+            <textarea type="text" class="more-details" placeholder="more details(Optional)"></textarea>
+            <input type="submit" class="send-button" value="book table">
+        </form>
+    </div>
+    <!-- end reservation section -->
+    <!-- start footer -->
+    <div class="footer">
+        <div class="left">
+            <div class="location footer-loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Jenin , AbuBaker street</p>
+            </div>
+            <div class="location footer-loc">
+                <i class="fa-solid fa-square-phone-flip"></i>
+                <p>+970568453235</p>
+            </div>
+            <div class="location footer-loc">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:abdullahiyad10@gmail.com?subject=contact">Support@ykpocafe.com</a>
+            </div>
+        </div>
+        <div class="right">
+            <h3>Social Media</h3>
+            <p>Welcome to YKPO Café in the heart of Jenin. Enjoy artisanal drinks and homemade pastries in a cozy,
+                friendly
+                atmosphere.
+                Open 24/7 at Jenin-AbuBaker Street.
+            </p>
+            <div class="links">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+    <!-- start preloading -->
+    <div class="loader">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+    <!-- end preloading -->
+
+    <!-- connect javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/reservation.js"></script>
+    <script src="/js/loading.js"></script>
+    <script src="/js/header.js"></script>
+</body>
+
+</html>

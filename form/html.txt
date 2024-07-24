@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- connect css files -->
+    <link rel="stylesheet" href="../css/header-style.css" />
+    <link rel="stylesheet" href="../css/footer-style.css">
+    <link rel="stylesheet" href="../css/loading-style.css" />
+    <link rel="stylesheet" href="/css/admin-dashboard.css" />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/images/home.ico" />
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <!-- start header -->
+    <div class="header">
+        <div class="header-container">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <span class="logo">YKPO Cafe</span>
+            <div class="right-header">
+                <div class="user-name">hey <span class="name">Admin</span></div>
+                <img class="user-img" src="/images/nigga.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="dashboard-container">
+        <div class="aside">
+            <ul>
+                <li class="dashboard"><a href=""><i class="fa-solid fa-house"></i> dashboard</a></li>
+                <li class="customers"><a href=""><i class="fa-regular fa-user"></i> customers</a></li>
+                <li class="orders"><a href=""><i class="fa-solid fa-scroll"></i> orders</a></li>
+                <li class="messages"><a href=""><i class="fa-regular fa-envelope"></i> messages</a></li>
+                <li class="products"><a href=""><i class="fa-solid fa-utensils"></i> products</a></li>
+                <li class="profile"><a href=""><i class="fa-solid fa-user"></i> your profile</a></li>
+
+            </ul>
+            <button class="logout">logout <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
+    <!-- end header -->
+    <!-- start preloading -->
+    <div class="loader">
+        <div class="one"></div>
+        <div class="two"></div>
+        <div class="three"></div>
+    </div>
+    <!-- end preloading -->
+    <script src="/js/admin-dashboard.js"></script>
+</body>
+
+</html>

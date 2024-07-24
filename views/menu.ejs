@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- connect css file -->
+    <link rel="stylesheet" href="/css/header-style.css" />
+    <link rel="stylesheet" href="/css/footer-style.css">
+    <link rel="stylesheet" href="/css/loading-style.css" />
+    <link rel="stylesheet" href="/css/menu.css" />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/images/home.ico" />
+    <title>YKPO Café</title>
+</head>
+
+<body>
+    <div class="loader">
+        <span class="text">YKPO Café</span>
+        <span>
+            <div class="one"><i class="fa-solid fa-cookie"></i></div>
+            <div class="two"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+            <div class="three"><i class="fa-solid fa-pizza-slice"></i></div>
+        </span>
+    </div>
+    <!-- start header -->
+    <div class="header">
+        <div class="header-container">
+            <i class="fa-solid fa-bars  burger-icon" onclick="activeLinks()"></i>
+            <span class="logo">YKPO Café</span>
+            <div class="links">
+                <ul>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="menu">Menu</a></li>
+                    <li><a href="home#about">About</a></li>
+                    <li><a href="reservation">Book Table</a></li>
+                </ul>
+            </div>
+            <div class="right-header">
+                <a href="#" class="cart-icon"><span class="cart-counter">0</span> <i
+                        class="fa-solid fa-cart-shopping"></i></a>
+                <a href="login" class="login-icon" onclick="redirect()" id="loginIc">
+                    <i class="fa-regular fa-circle-user login-icon"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+
+    <!-- start menu -->
+    <div class="menu">
+        <h2 class="menu-title">Menu <i class="fa-solid fa-utensils"></i></h2>
+        <div class="hot-drinks menu-section">
+            <h4>Hot Drinks <i class="fa-solid fa-mug-hot"></i></h4>
+            <div class="products ">
+            </div>
+        </div>
+
+        <div class="cold-drinks menu-section">
+            <h4>Cold Drinks <i class="fa-solid fa-martini-glass-empty"></i></h4>
+            <div class="products">
+
+            </div>
+        </div>
+        <div class="food menu-section ">
+            <h4>Food <i class="fa-solid fa-pizza-slice"></i></h4>
+            <div class="products">
+
+            </div>
+        </div>
+
+        <div class="dessert menu-section ">
+            <h4>Dessert <i class="fa-solid fa-cookie-bite"></i></h4>
+            <div class="products">
+
+            </div>
+        </div>
+    </div>
+    <!-- end menu -->
+    </div>
+    <!-- start cart tag -->
+    <div class="cart-tap">
+        <h1 class="cart-header"> Cart</h1>
+        <div class="list-cart">
+
+        </div>
+        <div class="btn">
+            <button class="close">Close</button>
+            <button class="checkout">Check out</button>
+        </div>
+    </div>
+    <!-- end cart tag -->
+
+    <!-- start footer -->
+    <div class="footer">
+        <div class="left">
+            <div class="location footer-loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Jenin , AbuBaker street</p>
+            </div>
+            <div class="location footer-loc">
+                <i class="fa-solid fa-square-phone-flip"></i>
+                <p>+970568453235</p>
+            </div>
+            <div class="location footer-loc">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:abdullahiyad10@gmail.com?subject=contact">Support@ykpocafe.com</a>
+            </div>
+        </div>
+        <div class="right">
+            <h3>Social Media</h3>
+            <p>Welcome to YKPO Café in the heart of Jenin. Enjoy artisanal drinks and homemade pastries in a cozy,
+                friendly
+                atmosphere.
+                Open 24/7 at Jenin-AbuBaker Street.
+            </p>
+            <div class="links">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+
+    <!-- connect javascript file -->
+    <script src="/js/menu.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+/* start global varibales */
+:root {
+  --main-font: "Merienda", cursive;
+  --background-main-color: white;
+  --front-main-color: black;
+  --font-color: white;
+  --large-font-size: 30px;
+  --small-font-size: 14px;
+  --radius-deg: 18px;
+  --color-background: #f6f6f9;
+  --color-white: #fff;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --main-font: "Merienda", cursive;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  /* --color-info-dark: #7d8da1; */
+  /* --color-info-light: #dce1eb; */
+  --color-primary-variant: #111e88;
+  --aside-links-size: 20px;
+  --aside-links-color: #8895a7;
+  --card-border-radius: 32px;
+  --border-radius-1: 6.4px;
+  --border-radius-2: 12.8px;
+  --border-radius-3: 19.2px;
+
+  --card-padding: 28.8px;
+  --padding-1: 19.2;
+  --statics-font: poppins, sans-serif;
+  --box-shadow: 0 32px 48px var(--color-light);
+}
+/* End global varibales */
+
+/* loading animation */
+
+.loader {
+  background-color: var(--background-main-color);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition-duration: 0.8s;
+}
+.loader span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader .text {
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--color-dark);
+}
+
+.loader div {
+  width: 40px;
+  height: 40px;
+  /* border-radius: 50%; */
+  color: orangered;
+  /* border: 1px solid var(--front-main-color); */
+  font-size: 50px;
+  margin-left: 5px;
+  animation-name: loading2;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  margin: 0 10px;
+}
+
+.loader .one {
+  animation-delay: 0s;
+}
+
+.loader .two {
+  animation-delay: 0.3s;
+}
+
+.loader .three {
+  animation-delay: 0.6s;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes loading2 {
+  0% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  100% {
+    opacity: 0.2;
+    transform: translateY(10px);
+  }
+}
+
+/* end loading animation */

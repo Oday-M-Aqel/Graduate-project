@@ -1,0 +1,147 @@
+:root {
+  --color-background: #f6f6f9;
+  --color-white: #fff;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --main-font: "Merienda", cursive;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  /* --color-info-dark: #7d8da1; */
+  /* --color-info-light: #dce1eb; */
+  --color-primary-variant: #111e88;
+  --aside-links-size: 20px;
+  --aside-links-color: #8895a7;
+  --card-border-radius: 32px;
+  --border-radius-1: 6.4px;
+  --border-radius-2: 12.8px;
+  --border-radius-3: 19.2px;
+
+  --card-padding: 28.8px;
+  --padding-1: 19.2;
+  --statics-font: poppins, sans-serif;
+  --box-shadow: 0 32px 48px var(--color-light);
+}
+html {
+  scroll-behavior: smooth;
+}
+/* start reset */
+
+/* STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/*end reset */
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--main-font);
+  font-size: 0.88rem;
+  text-transform: capitalize;
+  transition: 0.3s;
+  background: var(--color-background);
+  user-select: none;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--color-dark);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  font-family: var(--statics-font);
+}
+.user-info h1 {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+form.user-info {
+  width: fit-content;
+  height: fit-content;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  pointer-events: none;
+}
+
+.output .part {
+  width: 100%;
+  height: 60px;
+  font-size: 30px;
+}
+.output .part input {
+  font-size: 30px;
+  background-color: transparent;
+}
+.output .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+}
+.output .btns input {
+  pointer-events: painted;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: var(--border-radius-3);
+  -webkit-border-radius: var(--border-radius-3);
+  -moz-border-radius: var(--border-radius-3);
+  -ms-border-radius: var(--border-radius-3);
+  -o-border-radius: var(--border-radius-3);
+  box-shadow: var(--box-shadow);
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.output .btns input:hover {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+.output .btns .save-btn,
+.output .btns .cancel-btn {
+  display: none;
+}
+.output .btns .delete-btn {
+  background-color: rgba(255, 0, 0, 0.921);
+  border: none;
+  color: var(--color-white);
+}
+@media (max-width: 600px) {
+  .output {
+    min-width: 340px;
+  }
+  .output .part,
+  .output .part input,
+  .output .btns input {
+    font-size: 18px;
+  }
+}
+.on-edit .part input {
+  border: 1px solid;
+  pointer-events: painted;
+}
+.on-edit .btns .delete-btn,
+.on-edit .btns .edit-btn {
+  display: none;
+}
+.on-edit .btns .save-btn,
+.on-edit .btns .cancel-btn {
+  display: block;
+}

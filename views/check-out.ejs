@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- connect css file -->
+    <link rel="stylesheet" href="/css/header-style.css" />
+    <link rel="stylesheet" href="/css/footer-style.css">
+    <link rel="stylesheet" href="/css/loading-style.css" />
+    <link rel="stylesheet" href="/css/check-out.css" />
+
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/images/home.ico" />
+    <title>YKPO Café</title>
+
+</head>
+
+<body>
+    <!-- loading animation -->
+    <div class="loader">
+        <span class="text">YKPO Café</span>
+        <span>
+            <div class="one"><i class="fa-solid fa-cookie"></i></div>
+            <div class="two"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+            <div class="three"><i class="fa-solid fa-pizza-slice"></i></div>
+        </span>
+    </div>
+    <!--end loading animation -->
+
+    <!-- start header -->
+    <div class="page-container">
+        <!-- start header -->
+        <div class="header">
+            <div class="header-container">
+                <i class="fa-solid fa-bars  burger-icon" onclick="activeLinks()"></i>
+                <span class="logo">YKPO Café</span>
+                <div class="links">
+                    <ul>
+                        <li><a href="home">Home</a></li>
+                        <li><a href="menu">Menu</a></li>
+                        <li><a href="home#about">About</a></li>
+                        <li><a href="reservation">Book Table</a></li>
+                    </ul>
+                </div>
+                <div class="right-header">
+                    <a href="login" class="login-icon" onclick="redirect()" id="loginIc">
+                        <i class="fa-regular fa-circle-user login-icon"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- end header -->
+
+        <div class="check-out-container">
+            <div class="bill-container">
+                <div class="bill">
+                    <div class="bill-title">your order</div>
+                    <div class="product-table">
+
+                    </div>
+                    <div class="dashed">
+                        <hr>
+                    </div>
+                    <div class="total">
+                        <div class="label">total </div>
+                        <div class="price">
+                            <div class="number">0</div>
+                            <div class="sign">₪</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="address-container">
+                <form id="orderForm">
+                    <div class="address">
+                        <input type="text" class="name input-style" placeholder="name" required>
+                        <input type="text" class="phone input-style" placeholder="phone number"
+                            oninput="checkPhone(event)" required>
+                        <input type="text" class="city input-style" placeholder="city" required>
+                        <input type="text" class="address1 input-style" placeholder="address" required>
+                        <input type="text" class="address2 input-style" placeholder="address 2 (optional)">
+                        <label for="" class="method-payment">payment methods :</label>
+                        <div class="cod">
+                            <input type="radio" name="paymentRadio" id="cod" value="cod" class="Cash" checked>
+                            <label for="cod" class="cod-label">Cash on Delivery <span id="GScore">(Score:
+                                    +0)</span></label>
+                        </div>
+                        <div class="coins">
+                            <input type="radio" name="paymentRadio" id="coinsR" value="coins" class="Score"
+                                onclick="checkRadio()">
+                            <label for="coinsR" class="cod-label" id="coinsLabel">Score</label>
+                            <label for="coinsR" class="cod-label" id="coinsLabel-notEnough"
+                                onclick="checkRadio()"><del>Score</del></label><span id="NScore">(0/0)</span>
+                        </div>
+                        <div class="submit-btn">
+                            <input type="button" class="back" onclick="backFunc()" value="back">
+                            <input type="submit" class="submit" value="Submit Order">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- start footer -->
+    <div class="footer">
+        <div class="left">
+            <div class="location footer-loc">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Jenin , AbuBaker street</p>
+            </div>
+            <div class="location footer-loc">
+                <i class="fa-solid fa-square-phone-flip"></i>
+                <p>+970568453235</p>
+            </div>
+            <div class="location footer-loc">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:abdullahiyad10@gmail.com?subject=contact">Support@ykpocafe.com</a>
+            </div>
+        </div>
+        <div class="right">
+            <h3>Social Media</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil voluptate consectetur
+                ex perspiciatis
+                rerum quis
+                reiciendis saepe beatae necessitatibus eligendi eius natus, itaque aut facilis
+                accusantium in alias
+                iusto harum.
+            </p>
+            <div class="links">
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- end footer -->
+    <!-- connect javascript file -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/check-out.js"></script>
+    <script src="/js/loading.js"></script>
+    <script src="/js/header.js"></script>
+</body>
+
+</html>

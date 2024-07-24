@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --color-background: #f6f6f9;
+  --color-white: #fff;
+  --color-dark: #363949;
+  --color-light: rgba(132, 139, 200, 0.18);
+  --main-font: "Merienda", cursive;
+  --color-danger: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  /* --color-info-dark: #7d8da1; */
+  /* --color-info-light: #dce1eb; */
+  --color-primary-variant: #111e88;
+  --aside-links-size: 20px;
+  --aside-links-color: #8895a7;
+  --card-border-radius: 32px;
+  --border-radius-1: 6.4px;
+  --border-radius-2: 12.8px;
+  --border-radius-3: 19.2px;
+
+  --card-padding: 28.8px;
+  --padding-1: 19.2;
+  --statics-font: poppins, sans-serif;
+  --box-shadow: 0 32px 48px var(--color-light);
+}
+.dark-theme-variables {
+  --color-background: #181a1e;
+  --color-white: #202528;
+  --color-dark: #edeffd;
+  --color-dark-variant: #a3bdcc;
+  --color-light: rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+html {
+  scroll-behavior: smooth;
+}
+/* start reset */
+
+/* STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  appearance: none;
+  border: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+/*end reset */
+body {
+  width: 100vw;
+  height: 100vh;
+  font-family: var(--main-font);
+  font-size: 0.88rem;
+  text-transform: capitalize;
+  transition: 0.3s;
+  background: var(--color-background);
+  user-select: none;
+  overflow-x: hidden;
+
+  color: var(--color-dark);
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.reservation-container {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.reservation-container form {
+  background-color: var(--color-white);
+  min-width: 350px;
+  max-width: 800px;
+  padding: 20px;
+  box-shadow: var(--box-shadow);
+  height: 90%;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  overflow: hidden;
+}
+.reservation-container form input::placeholder {
+  text-transform: capitalize;
+  font-family: var(--statics-font);
+  font-size: 18px;
+}
+.reservation-container form input {
+  text-transform: capitalize;
+  font-size: 18px;
+  font-family: var(--statics-font);
+  height: 50px;
+  padding: 5px;
+  box-shadow: var(--box-shadow);
+}
+.reservation-container form textarea {
+  text-transform: initial;
+  font-size: 18px;
+  font-family: var(--statics-font);
+  padding: 5px;
+  box-shadow: var(--box-shadow);
+  resize: none;
+}
+.reservation-container form .person-name {
+  grid-area: 2/1 / span 1 / span 1;
+}
+.reservation-container form .persons-number {
+  grid-area: 3/1 / span 1 / span 1;
+}
+.reservation-container form .reservation-date {
+  grid-area: 3/2 / span 1 / span 1;
+}
+.reservation-container form .more-details {
+  grid-area: 4/1 / span 1 / span 2;
+  height: 120px;
+}
+.reservation-container form .send-button {
+  grid-area: 5/1 / span 1 / span 2;
+  font-weight: bold;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  cursor: pointer;
+}
+.reservation-container form h2 {
+  padding: 20px;
+  height: 40px;
+  text-align: center;
+  grid-area: 1/1 / span 1 / span 3;
+}
+/* @media (max-width: 850px) {
+  .reservation-container form {
+    width: 90%;
+  }
+  .reservation-container form .person-name {
+    grid-area: 2/1 / span 1 / span 2;
+  }
+
+  .reservation-container form .more-details {
+    grid-area: 5/1 / span 1 / span 2;
+    height: 120px;
+  }
+  .reservation-container form .send-button {
+    grid-area: 6/1 / span 1 / span 2;
+    font-weight: bold;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    cursor: pointer;
+  }
+  .reservation-container form h2 {
+    padding: 20px;
+    height: 40px;
+    text-align: center;
+    grid-area: 1/1 / span 1 / span 2;
+  } */
+/* } */
+@media (max-width: 600px) {
+  .reservation-container form {
+    width: 90%;
+  }
+  .reservation-container form .person-name {
+    grid-area: 2/1 / span 1 / span 2;
+  }
+  .reservation-container form .person-phone {
+    grid-area: 3/1 / span 1 / span 2;
+  }
+  .reservation-container form .persons-number {
+    grid-area: 4/1 / span 1 / span 2;
+  }
+  .reservation-container form .reservation-date {
+    grid-area: 5/1 / span 1 / span 2;
+  }
+  .reservation-container form .more-details {
+    grid-area: 7/1 / span 1 / span 1;
+    height: 120px;
+  }
+  .reservation-container form .send-button {
+    grid-area: 8/1 / span 1 / span 1;
+    font-weight: bold;
+    height: 60px;
+    background-color: var(--color-dark);
+    color: var(--color-white);
+    cursor: pointer;
+  }
+  .reservation-container form h2 {
+    padding: 20px;
+    height: 40px;
+    text-align: center;
+    grid-area: 1/1 / span 1 / span 1;
+  }
+}

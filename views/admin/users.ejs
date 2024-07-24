@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- connect css files -->
+    <link rel="stylesheet" href="/css/header-style.css" />
+    <link rel="stylesheet" href="/css/footer-style.css">
+    <link rel="stylesheet" href="/css/loading-style.css" />
+    <link rel="stylesheet" href="/css/admin-customers.css" />
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
+    <link rel="icon" href="/images/home.ico" />
+    <title>Admin Users</title>
+</head>
+
+<body>
+    <!-- start preloading -->
+    <div class="loader">
+        <span class="text">YKPO Café</span>
+        <span>
+            <div class="one"><i class="fa-solid fa-cookie"></i></div>
+            <div class="two"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+            <div class="three"><i class="fa-solid fa-pizza-slice"></i></div>
+        </span>
+    </div>
+    <!-- end preloading -->
+
+    <!-- start header -->
+    <div class="header">
+        <div class="header-container">
+            <i class="fa-solid fa-bars" id="menu-icon"></i>
+            <span class="logo"><a href="/home">YKPO Café</a>
+            </span>
+            <div class="right-header">
+                <div class="user-name">hey <span class="name">Admin</span></div>
+            </div>
+        </div>
+    </div>
+    <!-- end header -->
+    <div class="customer-container">
+        <!-- <form action="/admin/customer/logout"> -->
+        <div class="aside">
+            <ul>
+                <li class="dashboard"><a href="dashboard"><i class="fa-solid fa-house"></i> dashboard</a></li>
+                <li class="customers"><a href="users"><i class="fa-regular fa-user"></i> users</a></li>
+                <li class="orders"><a href="orders"><i class="fa-solid fa-scroll"></i> orders</a></li>
+                <li class="messages"><a href="messages"><i class="fa-regular fa-envelope"></i> Reservations</a></li>
+                <li class="products"><a href="products"><i class="fa-solid fa-utensils"></i> products</a></li>
+                <li class="profile"><a href="profile"><i class="fa-solid fa-user"></i> your profile</a></li>
+                <li class="backToHome"><a href="/home"><i class="fa-solid fa-left-long"></i>Back to Home</a></li>
+            </ul>
+            <button onclick="logout()" class="logout">logout <i
+                    class="fa-solid fa-arrow-right-from-bracket"></i></button>
+        </div>
+        <!-- </form> -->
+        <div class="content">
+            <h1 class="customer-title">Users</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>More</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="page-details-container">
+        <div class="details-page">
+            <form class="details-form" action="customer" enctype="multipart/form-data" method="post">
+                <div class="name-container input-field-container">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" name="name" class="name input-style" placeholder="Name" autocomplete="off"
+                        required />
+                </div>
+                <div class="phone-container input-field-container">
+                    <i class="fa-solid fa-phone"></i>
+                    <input type="phone" name="phone" class="phone input-style" placeholder="Phone Number 05xxxxxxxx"
+                        autocomplete="off" required />
+                </div>
+                <div class="email-container input-field-container">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" name="email" class="email input-style" placeholder="Email" autocomplete="off"
+                        required />
+                </div>
+                <div class="status-container input-field-container">
+                    <i class="fa-solid fa-user-tie"></i>
+                    <select name="state" id="select-state" class="state input-style">
+                        <option value="user">User</option>
+                        <option value="admin">Admin</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <input type="button" value="Delete" class="delete-btn">
+                    <input type="button" value="Edit" class="edit-btn">
+                    <input type="button" value="Done" class="done-btn">
+                    <input type="button" value="Save" class="save-btn" onclick="updateData()" />
+                    <input type="button" value="Cancel" class="cancel-btn">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/js/admin-users.js"></script>
+    <script src="/js/loading.js"></script>
+    <script src="/js/update-name.js"></script>
+</body>
+
+</html>

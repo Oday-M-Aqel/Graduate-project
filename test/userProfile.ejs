@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/profile.css">
+    <title></title>
+</head>
+
+<body>
+    <form action="none" class="user-info output">
+        <h1 class="profile-title">your profile</h1>
+        <div class="name-container part">
+            <label for="user-name">name :</label>
+            <input type="text" class="name" name="user-name" value="ahmed mohammed">
+        </div>
+        <div class="email-container part">
+            <label for="user-email">email :</label>
+            <input type="email" class="email" name="user-email" value="abdullah@gmail.com">
+        </div>
+        <div class="phone-container part">
+            <label for="user-phone">phone :</label>
+            <input type="text" class="phone" name="user-phone" value="06549898494">
+        </div>
+        <div class="password-container part">
+            <label for="old-password">old password</label>
+            <input type="password" class="old-password" name="old-password">
+            <label for="new-password">new password</label>
+            <input type="password" class="new-password" name="new-password">
+        </div>
+        <div class="part btns">
+            <input type="button" value="delete account" class="delete-btn">
+            <input type="button" value="edit" class="edit-btn">
+            <input type="submit" value="save" class="save-btn">
+            <input type="button" value="cancel" class="cancel-btn">
+        </div>
+    </form>
+    <script src="/js/profile.js"></script>
+</body>
+
+</html>

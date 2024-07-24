@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SignUp</title>
+  <!-- connect css file -->
+  <link rel="stylesheet" href="/css/signup-style.css" />
+  <link rel="stylesheet" href="/css/loading-style.css" />
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
+  <!-- icon -->
+  <link rel="icon" href="/images/home.ico" />
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="signup-container">
+      <h2 class="signup-title"><a href="home">YKPO Café</a></h2>
+      <form class="signup-form" action="/signup" method="post">
+        <div class="name-container input-field-container">
+          <i class="fa-solid fa-user"></i>
+          <input type="text" name="name" class="name input-style" placeholder="Name" autocomplete="off" required />
+        </div>
+
+        <div class="username-container input-field-container">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" name="email" class="email input-style" placeholder="Email" autocomplete="off" required
+            oninput="checkEmail(event)" />
+          <p class="emailExist disaper">This email has already been used.</p>
+        </div>
+        <div class="username-container input-field-container">
+          <i class="fa-solid fa-phone"></i>
+          <input type="text" name="phone" class="phone input-style" placeholder="Phone Number 05xxxxxxxx"
+            autocomplete="off" oninput="checkPhone(event)" required />
+        </div>
+
+        <div class="password-container input-field-container">
+          <i class="fa-solid fa-key"></i>
+          <input type="password" name="password" class="password input-style" placeholder="Password" autocomplete="off"
+            oninput="checkPassword(event)" required />
+          <label class="passwordHint" for="password">The password must include:
+            <li>Minimum length of 8 characters</li>
+            <li>At least one special character</li>
+            <li>At least one uppercase letter</li>
+            <li>At least one number</li>
+          </label>
+        </div>
+
+        <input type="submit" value="signup" class="signup-btn" />
+      </form>
+      <p>You have account ? <a href="login">Login</a></p>
+    </div>
+  </div>
+  <div class="loader">
+    <span class="text">YKPO Café</span>
+    <span>
+      <div class="one"><i class="fa-solid fa-cookie"></i></div>
+      <div class="two"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+      <div class="three"><i class="fa-solid fa-pizza-slice"></i></div>
+    </span>
+  </div>
+  <!-- connect javascript file -->
+  <script src="/js/loading.js"></script>
+  <script src="/js/signup.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

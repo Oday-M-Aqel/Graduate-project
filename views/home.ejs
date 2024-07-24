@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- connect css file -->
+  <link rel="stylesheet" href="/css/header-style.css" />
+  <link rel="stylesheet" href="/css/footer-style.css">
+  <link rel="stylesheet" href="/css/loading-style.css" />
+  <link rel="stylesheet" href="/css/home-style.css" />
+
+
+  <!-- fontawesome -->
+  <link rel="stylesheet" href="/css/fontawesome/css/all.min.css" />
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet" />
+  <link rel="icon" href="/images/home.ico" />
+  <title>YKPO Café</title>
+</head>
+
+<body>
+  <!-- start loading animation -->
+  <div class="loader">
+    <span class="text">YKPO Café</span>
+    <span>
+      <div class="one"><i class="fa-solid fa-cookie"></i></div>
+      <div class="two"><i class="fa-solid fa-martini-glass-citrus"></i></div>
+      <div class="three"><i class="fa-solid fa-pizza-slice"></i></div>
+    </span>
+  </div>
+  <!-- end loading animation -->
+
+
+  <!-- start header -->
+  <div class="header">
+    <div class="header-container">
+      <i class="fa-solid fa-bars  burger-icon" onclick="activeLinks()"></i>
+      <span class="logo">YKPO Café</span>
+      <div class="links">
+        <ul>
+          <li><a href="home">Home</a></li>
+          <li><a href="menu">Menu</a></li>
+          <li><a href="home#about">About</a></li>
+          <li><a href="reservation">Book Table</a></li>
+        </ul>
+      </div>
+      <div class="right-header">
+        <a href="login" class="login-icon" onclick="redirect()" id="loginIc">
+          <i class="fa-regular fa-circle-user login-icon"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- end header -->
+  <!-- start home section -->
+  <div class="home-container" id="home">
+    <div class="home-left">
+      <p>tasted flavors from around the world</p>
+      <a href="menu" class="order-btn"> Order Now <i class="fa-solid fa-utensils"></i></a>
+    </div>
+    <div class="home-right"></div>
+  </div>
+  </div>
+  <!-- end home section -->
+
+  <!-- start about section -->
+  <div class="about-section" id="about">
+    <div class="image-container"></div>
+    <div class="info-container">
+      <div class="info-text">
+        <h3>the health food for wealthy mood</h3>
+        <p>Welcome to YKPO Café , your cozy retreat in the heart of Jenin. Enjoy our artisanal drinks, paired
+          perfectly with homemade pastries and fresh, delicious bites. Our inviting atmosphere and friendly shefs make
+          it the
+          ideal spot to relax, work, or catch up with friends. Visit us at Jenin-AbuBaker street. We are open 24/7 to
+          serve you anytime!</p>
+      </div>
+      <div class="info-features">
+        <div class="feature">
+          <i class="fa-solid fa-cart-shopping"></i>
+          ordering online
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-clock"></i>
+          Pre-Booking
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          24/7 services
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-location-dot"></i>
+          hygienic place
+        </div>
+      </div>
+      <a href="reservation">Book Your Table</a>
+    </div>
+  </div>
+  <!-- end about section -->
+  <!-- start footer -->
+  <div class="footer">
+    <div class="left">
+      <div class="location footer-loc">
+        <i class="fa-solid fa-location-dot"></i>
+        <p>Jenin , AbuBaker street</p>
+      </div>
+      <div class="location footer-loc">
+        <i class="fa-solid fa-square-phone-flip"></i>
+        <p>+970568453235</p>
+      </div>
+      <div class="location footer-loc">
+        <i class="fa-solid fa-envelope"></i>
+        <a href="mailto:abdullahiyad10@gmail.com?subject=contact">Support@ykpocafe.com</a>
+      </div>
+    </div>
+    <div class="right">
+      <h3>Social Media</h3>
+      <p>Welcome to YKPO Café in the heart of Jenin. Enjoy artisanal drinks and homemade pastries in a cozy, friendly
+        atmosphere.
+        Open 24/7 at Jenin-AbuBaker Street.
+      </p>
+      <div class="links">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+  </div>
+  <!-- end footer -->
+
+  <!-- connect javascript file -->
+  <script src="/js/home.js"></script>
+  <script src="/js/loading.js"></script>
+  <script src="/js/header.js"></script>
+</body>
+
+</html>
