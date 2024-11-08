@@ -1,7 +1,5 @@
 const jwt = require('jsonwebtoken');
 const User = require('../nodejs/Database/models/users');
-
-
 const path = require('path');
 const multer = require('multer');
 const secretKey = 'OdayIsNerd';
