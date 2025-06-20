@@ -118,11 +118,11 @@ module.exports.dashboard_get = async (req, res) => {
   const userId = getUserData(req);
   const User = await user.findById(userId);
   if(!User){
-    res.render("login");
+    return res.render("login");
   } else if (User.status === 'admin') {
-    res.render("admin/dashboard");
+    return res.render("admin/dashboard");
   } else {
-    res.render("home"); 
+    return res.render("home"); 
   }
 };
 module.exports.dashboard_get_data = async (req, res) => {
